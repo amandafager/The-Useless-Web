@@ -93,6 +93,8 @@ button {
   font-size: 1.2rem;
   outline: none;
   letter-spacing: 0.03rem;
+  cursor: pointer;
+  -webkit-appearance: none;
 }
 button:focus {
   background-color: rgb(161, 150, 223);
