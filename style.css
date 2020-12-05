@@ -88,14 +88,11 @@ button {
   margin: 0.9rem;
   width: 140px;
   border-radius: 4rem;
-  border: none;
   color: black;
-  background-color: white;
   font-size: 1.2rem;
   outline: none;
   letter-spacing: 0.03rem;
   cursor: pointer;
-  -webkit-appearance: none;
 }
 button:focus {
   background-color: rgb(161, 150, 223);
