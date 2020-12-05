@@ -14,7 +14,7 @@ body {
   font-family: "Helvetica";
 }
 h1 {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: rgb(60, 13, 29);
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
     0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
@@ -52,16 +52,31 @@ h1 {
   width: 350px;
   height: 300px;
   background-color: rgb(167, 167, 167);
+  border: 1rem ridge;
+  /*order-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-slice: 1;
+  border-width: 5px;*/
   box-shadow: -6px 5px 13px 2px rgba(0, 0, 0, 0.25);
   transition: all 3s ease;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   z-index: 2;
-  display: flex;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center;*/
 }
 .cardholder {
   perspective: 400px;
+}
+
+.img-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  --n: 1;
+  width: 100%;
+  width: calc(var(--n) * 100%);
+  transform: translate(calc(var(--i, 0) / var(--n) * -100%));
 }
 
 .slider_slide {
@@ -69,10 +84,24 @@ h1 {
   width: 100%;
   height: 100%;
   display: none;
+  min-width: 100%;
+  width: 100%;
+  width: calc(100% / var(--n));
+  pointer-events: none;
 }
 button {
   padding: 1rem;
-  margin: 0.5rem;
+  margin: 0.9rem;
+  width: 140px;
+  border-radius: 4rem;
+  border: none;
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+  letter-spacing: 0.03rem;
+}
+button:focus {
+  background-color: rgb(161, 150, 223);
 }
 
 .slider_nav:disabled {
