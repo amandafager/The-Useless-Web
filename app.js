@@ -55,7 +55,7 @@ forwardButton.addEventListener('click', () => {
 const card = document.querySelector(".card");
 
 
-card.addEventListener('touchmove', () => {
+slides.addEventListener('touchmove', () => {
   newIndex++;
   navigateSlider();
 });
