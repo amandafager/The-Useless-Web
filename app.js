@@ -52,43 +52,13 @@ forwardButton.addEventListener('click', () => {
   navigateSlider();
 });
 
-   
+const card = document.querySelector(".card");
 
 
-
-/*
-function navigateSlider() {
-  slides.src = gifs[newIndex];
-  forwardButton.disabled = (newIndex === gifs.length - 1) ? true : false;
-  backButton.disabled = (newIndex === 0) ? true : false;
-}
-
-
-forwardButton.addEventListener('click', () => {
-  newIndex = (newIndex !== gifs.length - 1) ? newIndex + 1 : 0;
+card.addEventListener('touchmove', () => {
+  newIndex++;
   navigateSlider();
-  
-  if(newIndex < gifs.length - 1){
-    newIndex++;
-  }
-  else{
-    index = 0; 
-  }
 });
-
-backButton.addEventListener('click', () => {
-  navigateSlider();
-  if (newIndex == 0){
-    newIndex = gifs.length - 1;
-} 
-else{
-  newIndex = newIndex - 1;
-} 
-  
-});
-
-
-*/
 
 
 
