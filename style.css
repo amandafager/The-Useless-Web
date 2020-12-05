@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(15, 18, 33);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container-snow {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.snow-flake {
+  animation: fall 15s linear forwards infinite;
+  position: relative;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-30vh) rotate(380deg);
+  }
+  to {
+    transform: translateY(100vh);
+  }
+}
