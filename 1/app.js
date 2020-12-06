@@ -3,16 +3,24 @@ const container = document.querySelector('.container-snow');
 let flake = document.querySelector('.snow-flake');
 let section = document.querySelector('section');
 
-let snow = 100; 
+createSnow();
 
-for(let i = 0; i < snow; i++ ){
+function createSnow() {
+  let snow = 100; 
+  for(let i = 0; i < snow; i++ ){
+    let moreflake = flake.cloneNode(true);
+    moreflake.style.opacity = Math.random() * 1;
+    moreflake.style.animationDuration = Math.random() * 20 + 20 + "s";
+    container.appendChild(moreflake); 
 
-  let moreflake = flake.cloneNode(true);
-  moreflake.style.opacity = Math.random() * 1;
-  moreflake.style.animationDuration = Math.random() * 20 + 30 + "s";
-  container.appendChild(moreflake); 
-  
+  };
+
+  /*moreflake.addEventListener('mouseover', (e) => {
+    moreflake.style.opacity = 0;
+  });*/
+
 };
+
 
 
 
@@ -26,6 +34,19 @@ const gifs = [
 const slides = document.querySelector(".slider_slide");
 const forwardButton = document.querySelector(".slider_nav_forward");
 const backButton = document.querySelector(".slider_nav_back");
+const body = document.querySelector("body");
+
+slides.addEventListener('mouseover', (e) => {
+  body.style.backgroundColor = 'black';
+  body.style.transition = '0.3s ease'; 
+});
+
+slides.addEventListener('mouseout', (e) => {
+  body.style.backgroundColor = '';
+});
+
+
+
 
 
 slides.style.display = "block";
@@ -40,6 +61,7 @@ function navigateSlider() {
    currentIndex = newIndex;
    forwardButton.disabled = (newIndex === gifs.length - 1) ? true : false;
    backButton.disabled = (newIndex === 0) ? true : false;
+   
 }
 
 backButton.addEventListener('click', () => {
@@ -53,3 +75,9 @@ forwardButton.addEventListener('click', () => {
 });
 
 const card = document.querySelector(".card");
+
+
+
+
+
+

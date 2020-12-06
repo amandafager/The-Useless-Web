@@ -27,7 +27,6 @@ h1 {
 .container-snow {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
 }
 .snow-flake {
   animation: fall 30s linear forwards infinite;
@@ -88,6 +87,7 @@ button {
   margin: 0.9rem;
   width: 140px;
   border-radius: 4rem;
+  border: 1px solid;
   color: black;
   font-size: 1.2rem;
   outline: none;
@@ -101,4 +101,15 @@ button:focus {
 .slider_nav:disabled {
   /* make the button almost invisible */
   opacity: 0.4;
+}
+
+@media screen and (orientation: landscape) {
+  /*.card {
+    width: 450px;
+    height: 300px;
+    margin-top: 2rem;
+  }*/
+}
+
+.slider_slide--faded-out {
 }
