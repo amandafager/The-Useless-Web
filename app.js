@@ -1,81 +1,85 @@
 
-const container = document.querySelector('.container-snow');
-let flake = document.querySelector('.snow-flake');
-let section = document.querySelector('section');
 
-createSnow();
-
-function createSnow() {
-  let snow = 100; 
-  for(let i = 0; i < snow; i++ ){
-    let moreflake = flake.cloneNode(true);
-    moreflake.style.opacity = Math.random() * 1;
-    moreflake.style.animationDuration = Math.random() * 20 + 20 + "s";
-    container.appendChild(moreflake); 
-
-  };
-
-  /*moreflake.addEventListener('mouseover', (e) => {
-    moreflake.style.opacity = 0;
-  });*/
-
-};
+const slideForward = document.querySelector('.slide-forward');
+const slideBack = document.querySelector('.slide-back');
+const play = document.querySelector('.play');
+const body = document.querySelector('body');
 
 
+slideForward.addEventListener('click', () => {
+  document.querySelector('.container').scrollLeft += 400;
+  
+});
+
+slideBack.addEventListener('click', () => {
+  document.querySelector('.container').scrollLeft -= 400;
+  
+});
 
 
 const gifs = [
   'https://media.giphy.com/media/ienko7tUwlgz86igqU/giphy.gif',
   'https://media.giphy.com/media/r3jTnU6iEwpbO/giphy.gif',
-  'https://media.giphy.com/media/K2l8gFcatHmsE/giphy.gif',
-  
+  'https://media.giphy.com/media/dB5cQcF3dCHdM2iz4h/giphy.gif',  
 ];
+
+
+
+    gifs.forEach(function(gif){
+      const slides = document.createElement('img');
+      container.appendChild(slides);
+      slides.src = gif;
+      slides.classList.add('child'); 
+  
+
+
+      slideForward.addEventListener('click', () => {
+        //slides.style.opacity = 1;
+        //slides.classList.add('animation'); 
+        
+      });
+
+
+      container.addEventListener('touchstart', () => {
+        slides.style.opacity = 1;
+      });
+
+      container.addEventListener('mouseover', () => {
+        slides.style.opacity = 1;
+      });
+
+///hitta ett sätt att kunna trycka på body för att få opacity 0 men när man trycker på knapparna få 1
+     /* body.addEventListener('click', () => {
+        slides.style.opacity = 0;
+      });*/
+  
+  }); 
+
+
+  
+
  
-const slides = document.querySelector(".slider_slide");
-const forwardButton = document.querySelector(".slider_nav_forward");
-const backButton = document.querySelector(".slider_nav_back");
-const body = document.querySelector("body");
-
-slides.addEventListener('mouseover', (e) => {
-  body.style.backgroundColor = 'black';
-  body.style.transition = '0.3s ease'; 
-});
-
-slides.addEventListener('mouseout', (e) => {
-  body.style.backgroundColor = '';
-});
+ 
+ 
+/*
+  const slidesLength = slides.length;
+  slideBack.disabled = (slides.length === 0) ? true : false;
+  slideForward.disabled = (slides.length === slidesLength - 1) ? true : false;
+*/
 
 
 
-
-
-slides.style.display = "block";
-
-
-var currentIndex = 0;
-var newIndex = 0; // keep track of the new slide
-
-
-function navigateSlider() {
-   slides.src = gifs[newIndex];
-   currentIndex = newIndex;
-   forwardButton.disabled = (newIndex === gifs.length - 1) ? true : false;
-   backButton.disabled = (newIndex === 0) ? true : false;
-   
-}
-
-backButton.addEventListener('click', () => {
-  newIndex--;
-  navigateSlider();
-});
-
-forwardButton.addEventListener('click', () => {
-  newIndex++;
-  navigateSlider();
-});
-
-const card = document.querySelector(".card");
-
+/*
+ const gifs = {
+  
+      src: 'https://media.giphy.com/media/ienko7tUwlgz86igqU/giphy.gif', 
+      alt: 'frg4',
+      src: 'https://media.giphy.com/media/r3jTnU6iEwpbO/giphy.gif',
+      alt: 'frf',
+      src: 'https://media.giphy.com/media/K2l8gFcatHmsE/giphy.gif', 
+      alt: 'gt2t',
+    };
+*/
 
 
 
