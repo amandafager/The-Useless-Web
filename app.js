@@ -38,10 +38,10 @@ const gifs = [
         
       });
 
-      /*container.addEventListener('touchstart', () => {
+     container.addEventListener('touchstart', () => {
         slides.style.opacity = 1;
       });
-
+ /*
       app.js:41 [Violation] Added non-passive event listener to a scroll-blocking 'touchstart' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952
       */
 

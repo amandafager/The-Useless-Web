@@ -9,7 +9,12 @@
   position: fixed;
   overflow: hidden;
   display: none;
-  z-index: -1;
+  z-index: 1;
+  pointer-events: visible;
+}
+
+button {
+  pointer-events: visible;
 }
 
 .container-snow {

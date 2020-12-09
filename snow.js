@@ -61,9 +61,13 @@ const snowflakes = document.querySelectorAll('.snow-flake');
 
 snowflakes.forEach(snowflake => {
 
-    snowflake.addEventListener('mouseover', () => {
+    snowflake.addEventListener('mouseover', (e) => {
 
-        snowflake.classList.add('glow')
+        e.preventDefault();
+
+        snowflake.style.zindex = 1;
+
+        snowflake.classList.add('glow');
         
         console.log(snowflake);
    });
@@ -71,7 +75,9 @@ snowflakes.forEach(snowflake => {
    snowflake.addEventListener('touchstart', (e) => {
 
     e.preventDefault();
+
     snowflake.classList.add('glow');
+
     setTimeout(function(){ 
         snowflake.classList.remove('glow');  
      }, 5000);
@@ -79,9 +85,11 @@ snowflakes.forEach(snowflake => {
    });
 
    snowflake.addEventListener('mouseout', () => {
+
+    
        setTimeout(function(){ 
            snowflake.classList.remove('glow');  
-        }, 500);
+        }, 3000);
    });
 
 });
