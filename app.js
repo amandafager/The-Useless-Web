@@ -1,9 +1,12 @@
 
+gifShow();
 
+function gifShow(){
+
+const container = document.querySelector('.container');
 const slideForward = document.querySelector('.slide-forward');
 const slideBack = document.querySelector('.slide-back');
-const play = document.querySelector('.play');
-const body = document.querySelector('body');
+
 
 
 slideForward.addEventListener('click', () => {
@@ -23,37 +26,32 @@ const gifs = [
   'https://media.giphy.com/media/dB5cQcF3dCHdM2iz4h/giphy.gif',  
 ];
 
-
-
     gifs.forEach(function(gif){
       const slides = document.createElement('img');
       container.appendChild(slides);
       slides.src = gif;
       slides.classList.add('child'); 
   
-
-
       slideForward.addEventListener('click', () => {
         //slides.style.opacity = 1;
         //slides.classList.add('animation'); 
         
       });
 
-
-      container.addEventListener('touchstart', () => {
+      /*container.addEventListener('touchstart', () => {
         slides.style.opacity = 1;
       });
+
+      app.js:41 [Violation] Added non-passive event listener to a scroll-blocking 'touchstart' event. Consider marking event handler as 'passive' to make the page more responsive. See https://www.chromestatus.com/feature/5745543795965952
+      */
 
       container.addEventListener('mouseover', () => {
         slides.style.opacity = 1;
       });
-
-///hitta ett sätt att kunna trycka på body för att få opacity 0 men när man trycker på knapparna få 1
-     /* body.addEventListener('click', () => {
-        slides.style.opacity = 0;
-      });*/
   
   }); 
+
+};
 
 
   
@@ -69,17 +67,6 @@ const gifs = [
 
 
 
-/*
- const gifs = {
-  
-      src: 'https://media.giphy.com/media/ienko7tUwlgz86igqU/giphy.gif', 
-      alt: 'frg4',
-      src: 'https://media.giphy.com/media/r3jTnU6iEwpbO/giphy.gif',
-      alt: 'frf',
-      src: 'https://media.giphy.com/media/K2l8gFcatHmsE/giphy.gif', 
-      alt: 'gt2t',
-    };
-*/
 
 
 
