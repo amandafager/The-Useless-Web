@@ -26,7 +26,7 @@ button {
 
 .snow-flake {
   height: 20px;
-  margin-top: -2rem;
+  margin-top: -2.2rem;
   animation: fall 30s linear forwards infinite;
   color: white;
 }

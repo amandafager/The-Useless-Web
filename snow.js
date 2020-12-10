@@ -8,6 +8,7 @@ createSnow();
 
 snowButton.addEventListener('click', () => {
 
+
     if (snow.style.display === "flex") {
        snow.style.display = "none";
        snowButton.textContent = "Let it snow!";
@@ -17,6 +18,10 @@ snowButton.addEventListener('click', () => {
        snowButton.textContent = "Stop snow";
     }
  });
+
+ function random(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min);
+ }
  
 
  function createSnow(){
@@ -27,7 +32,7 @@ snowButton.addEventListener('click', () => {
 
         let flake = document.createElement('div');
         flake.classList.add('snow-flake');
-        //flake.style.fontSize = Math.random() * 2 + "rem";
+        flake.style.fontSize = Math.random() * 2 + "rem";
         flake.style.opacity = Math.random() * 0.9;
         flake.style.animationDuration = Math.random() * 2 + 10 + "s";
         flake.style.animationDelay = Math.random() * 10 +  "s";

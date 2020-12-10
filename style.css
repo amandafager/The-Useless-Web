@@ -1,12 +1,19 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
+h1 {
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  animation: animated-text 2s 0.3s ease-in both;
+  font-size: 2rem;
 }
 
-body {
-  height: 100vh;
-  width: 100%;
-  background-color: rgb(167, 167, 167);
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 header {
@@ -14,19 +21,38 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  height: 120px;
 }
 
 .slide-show {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
 }
-.container {
+
+.first {
+  width: 350px;
+  height: 350px;
   display: flex;
-  max-width: 400px;
-  max-height: 400px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: rgb(166, 17, 25);
+  opacity: 1;
+  transition: 2s ease-in;
+  position: absolute;
+  z-index: 2;
+  color: white;
+}
+
+.container {
+  background-color: rgb(166, 17, 25);
+  display: flex;
+  /*max-width: 350px;
+  max-height: 350px;*/
+  width: 350px;
+  height: 350px;
   border: 1px solid #ccc;
   overflow-x: scroll;
   scroll-behavior: smooth;
@@ -38,25 +64,47 @@ header {
   scrollbar-width: none;
   position: relative;
   z-index: 1;
+  box-shadow: 3px 1px 20px 11px rgba(50, 48, 48, 0.25);
 }
 .container::-webkit-scrollbar {
   display: none;
 }
 
-img {
+/*.before {
+  width: 360px;
+  height: 360px;
+  background-color: rgb(166, 17, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+.three {
+  width: 350px;
+  height: 350px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: rgb(255, 255, 255);
+  animation: fadeout 3s ease-in;
+}*/
+
+video {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: 1s ease-in;
+  animation: fade 5s ease-in;
+  transition: 2s ease-in;
 }
 .child {
-  scroll-snap-align: start;
+  scroll-snap-align: center;
 }
 
 .btns {
   display: flex;
+  opacity: 0;
+  transition: 1s ease-in;
 }
+
 button {
   margin: 1rem;
   position: relative;
@@ -66,14 +114,28 @@ button {
 .animation {
   animation: fade 3s ease-in;
 }
+
 @keyframes fade {
   0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
