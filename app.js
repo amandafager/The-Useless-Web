@@ -20,13 +20,13 @@ const slideBack = document.querySelector('.slide-back');
 
 
 slideForward.addEventListener('click', () => {
-  document.querySelector('.container').scrollBy(350, 0);
+  document.querySelector('.container').scrollBy(300, 0);
   //document.querySelector('.container').scrollLeft += 350;
   
 });
 
 slideBack.addEventListener('click', () => {
-  document.querySelector('.container').scrollLeft -= 350;
+  document.querySelector('.container').scrollLeft -= 300;
   
 });
 

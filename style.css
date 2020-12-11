@@ -15,8 +15,8 @@
 }
 
 .box {
-  height: 320px;
-  width: 320px;
+  height: 280px;
+  width: 280px;
   border: 1px solid white;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ h1 {
   white-space: nowrap;
   letter-spacing: 0.1em;
   animation: animated-text 2s 0.3s ease-in both;
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 @keyframes animated-text {
