@@ -32,12 +32,12 @@ snowButton.addEventListener('click', () => {
 
         let flake = document.createElement('div');
         flake.classList.add('snow-flake');
-        flake.style.fontSize = Math.random() * 2 + "rem";
+        flake.style.fontSize = Math.random() * 5 + "rem";
         flake.style.opacity = Math.random() * 0.9;
         flake.style.animationDuration = Math.random() * 2 + 10 + "s";
         flake.style.animationDelay = Math.random() * 10 +  "s";
-        flake.textContent = "❄";
-
+        flake.textContent = "*";
+        /*\u2744*/
 
           /*
             let xy = getRandomPosition(flake);

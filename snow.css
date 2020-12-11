@@ -4,16 +4,12 @@
 }
 
 .snow {
-  width: 100%;
   height: 100%;
+  width: 100vw;
   position: fixed;
   overflow: hidden;
   display: none;
   z-index: 1;
-  pointer-events: visible;
-}
-
-button {
   pointer-events: visible;
 }
 
@@ -25,17 +21,17 @@ button {
 }
 
 .snow-flake {
-  height: 20px;
-  margin-top: -2.2rem;
+  height: 100%;
+  margin-top: -3rem;
   animation: fall 30s linear forwards infinite;
   color: white;
 }
 
 @keyframes fall {
   from {
-    transform: translateY(-5vh) rotate(380deg);
+    transform: translateY(-5%) /*rotate(380deg)*/;
   }
   to {
-    transform: translateY(100vh);
+    transform: translateY(100%);
   }
 }

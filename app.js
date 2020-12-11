@@ -20,7 +20,8 @@ const slideBack = document.querySelector('.slide-back');
 
 
 slideForward.addEventListener('click', () => {
-  document.querySelector('.container').scrollLeft += 350;
+  document.querySelector('.container').scrollBy(350, 0);
+  //document.querySelector('.container').scrollLeft += 350;
   
 });
 
@@ -117,13 +118,11 @@ function fadeInButtons() {
   
 };
 
-setTimeout(function(){
-  removeFirst.style.opacity = 0;
-}, 5000); 
-
 fadeOut();
 
 setTimeout(function(){
+  const container = document.querySelector('.container');
+  container.style.display = 'flex';
   gifShow(); 
 }, 4000);
 
