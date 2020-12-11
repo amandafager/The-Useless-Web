@@ -71,6 +71,11 @@ setTimeout(function(){
 }, 8000); 
 
 
+setTimeout(function(){ 
+  const leef = document.querySelector('.leef svg');
+  leef.classList.add('animation-leef'); 
+}, 3000);
+
 
 
 

@@ -18,11 +18,6 @@ snowButton.addEventListener('click', () => {
     }
  });
 
- function random(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min);
- }
- 
-
  function createSnow(){
    
     let snowflakes = 100;
@@ -36,66 +31,40 @@ snowButton.addEventListener('click', () => {
         flake.style.animationDuration = Math.random() * 2 + 10 + "s";
         flake.style.animationDelay = Math.random() * 10 +  "s";
         flake.textContent = "*";
-        /*\u2744*/
-
-          /*
-            let xy = getRandomPosition(flake);
-            flake.style.top = xy[0] + 'px';
-            flake.style.left = xy[1] + 'px';*/
-            
-
-       
         snow.appendChild(flake);
   };
-
  };
-
- function getRandomPosition(element) {
-	let x = document.body.offsetHeight-element.clientHeight;
-	let y = document.body.offsetWidth-element.clientWidth;
-	let randomX = Math.floor(Math.random()*x);
-	let randomY = Math.floor(Math.random()*y);
-	return [randomX,randomY];
-}
-
-
 
 
 const snowflakes = document.querySelectorAll('.snow-flake');
-
 snowflakes.forEach(snowflake => {
 
     snowflake.addEventListener('mouseover', (e) => {
 
-        e.preventDefault();
-
-        snowflake.style.zindex = 1;
-
         snowflake.classList.add('glow');
-        
-        console.log(snowflake);
    });
 
    snowflake.addEventListener('touchstart', (e) => {
-
-    e.preventDefault();
-
-    snowflake.classList.add('glow');
-
-    setTimeout(function(){ 
-        snowflake.classList.remove('glow');  
-     }, 5000);
-
+      
+      snowflake.classList.add('glow');
+      
+      setTimeout(function(){
+         snowflake.classList.remove('glow');
+      }, 5000);
    });
 
    snowflake.addEventListener('mouseout', () => {
-
-    
-       setTimeout(function(){ 
+      
+      setTimeout(function(){ 
            snowflake.classList.remove('glow');  
-        }, 3000);
+        }, 2500);
    });
 
 });
+
+
+
+
+
 
 

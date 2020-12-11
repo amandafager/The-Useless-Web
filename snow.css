@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   position: absolute;
-  /*position: fixed;*/
   overflow: hidden;
   display: none;
   z-index: 2;
@@ -17,13 +16,16 @@
 }
 
 .snow-flake {
+  height: 1px;
   animation: fall 30s linear forwards infinite;
   color: white;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 @keyframes fall {
   from {
-    transform: translateY(0vh) /*rotate(380deg)*/;
+    transform: translateY(0vh) rotate(380deg);
   }
   to {
     transform: translateY(100vh);
