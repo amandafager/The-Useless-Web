@@ -1,7 +1,6 @@
-const container = document.querySelector('.container-snow');
+const snow = document.querySelector('.container-snow');
 const body = document.querySelector('body');
 const snowButton = document.querySelector('.lets-snow');
-const snow = document.querySelector('.snow');
 
 createSnow();
 
@@ -26,9 +25,9 @@ snowButton.addEventListener('click', () => {
 
  function createSnow(){
    
-    let snow = 100;
+    let snowflakes = 100;
    
-    for(let i = 0; i < snow; i++ ){
+    for(let i = 0; i < snowflakes; i++ ){
 
         let flake = document.createElement('div');
         flake.classList.add('snow-flake');
@@ -46,7 +45,7 @@ snowButton.addEventListener('click', () => {
             
 
        
-        container.appendChild(flake);
+        snow.appendChild(flake);
   };
 
  };

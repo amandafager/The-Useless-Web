@@ -3,32 +3,27 @@
     0 0 30px #e60073, 0 0 20px #e60073, 0 0 10px #e60073;
 }
 
-.snow {
+.container-snow {
   width: 100%;
-  height: 100vh;
-  position: fixed;
+  height: 115vh;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  /*position: fixed;*/
   overflow: hidden;
   display: none;
-  z-index: 1;
+  z-index: 2;
   pointer-events: visible;
 }
 
-.container-snow {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .snow-flake {
-  margin-top: -3rem;
   animation: fall 30s linear forwards infinite;
   color: white;
 }
 
 @keyframes fall {
   from {
-    transform: translateY(-5vh) /*rotate(380deg)*/;
+    transform: translateY(0vh) /*rotate(380deg)*/;
   }
   to {
     transform: translateY(100vh);
