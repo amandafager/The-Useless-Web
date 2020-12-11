@@ -20,14 +20,14 @@ const slideBack = document.querySelector('.slide-back');
 
 
 slideForward.addEventListener('click', () => {
-  document.querySelector('.container').scrollBy(300, 0);
-  //document.querySelector('.container').scrollLeft += 350;
+  let w = container.clientWidth;
+  container.scrollLeft += w;
   
 });
 
 slideBack.addEventListener('click', () => {
-  document.querySelector('.container').scrollLeft -= 300;
-  
+  let w = container.clientWidth;
+  container.scrollLeft -= w;
 });
 
 
@@ -97,6 +97,7 @@ const gifs = [
   
 
 };
+
 
 function fadeOut() {
 
