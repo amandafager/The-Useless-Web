@@ -46,7 +46,6 @@ function gifShow(){
     'https://media.giphy.com/media/dB5cQcF3dCHdM2iz4h/giphy.mp4',
     'https://media.giphy.com/media/3oriOb1AHvsIj24On6/giphy.mp4', 
     'https://media.giphy.com/media/MrxXXBriEIKBO/giphy.mp4',
-    'https://media.giphy.com/media/ahZZZZFGLGhvq/giphy.mp4',
   ];
   
   
