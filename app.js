@@ -88,7 +88,7 @@ setTimeout(function(){
   const container = document.querySelector('.container');
   container.style.display = 'flex';
   gifShow(); 
-}, 3000);
+}, 4000);
 
 setTimeout(function(){
   fadeInButtons(); 
