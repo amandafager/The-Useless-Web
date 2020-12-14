@@ -13,7 +13,7 @@ First hand-in assignments in Javascript.
 * HTML
 
 
-## Link to page 
+## Link to project 
 
 https://a-useless-website.netlify.app/
 

@@ -4,6 +4,7 @@ const snowButton = document.querySelector('.lets-snow');
 
 
 setTimeout(function(){
+   snowButton.style.opacity = 1;
    snowButton.classList.add('bounce'); 
  }, 10000); 
  
@@ -45,7 +46,7 @@ snowButton.addEventListener('click', () => {
 const snowflakes = document.querySelectorAll('.snow-flake');
 snowflakes.forEach(snowflake => {
 
-    snowflake.addEventListener('mouseover', (e) => {
+    snowflake.addEventListener('mouseover', () => {
 
         snowflake.classList.add('glow');
    });
@@ -55,7 +56,7 @@ snowflakes.forEach(snowflake => {
       
       setTimeout(function(){ 
            snowflake.classList.remove('glow');  
-        }, 2500);
+        }, 3000);
    });
 
 });
