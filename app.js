@@ -47,7 +47,6 @@ function gifShow(){
     'https://media.giphy.com/media/3oriOb1AHvsIj24On6/giphy.mp4', 
     'https://media.giphy.com/media/MrxXXBriEIKBO/giphy.mp4',
     'https://media.giphy.com/media/ahZZZZFGLGhvq/giphy.mp4',
-
   ];
   
   
@@ -89,7 +88,7 @@ setTimeout(function(){
   const container = document.querySelector('.container');
   container.style.display = 'flex';
   gifShow(); 
-}, 4000);
+}, 3000);
 
 setTimeout(function(){
   fadeInButtons(); 
