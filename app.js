@@ -105,7 +105,7 @@ setTimeout(function(){
 setTimeout(function(){ 
   const leef = document.querySelector('.leef svg');
   leef.classList.remove('animation-leef'); 
-}, 4000);
+}, 5000);
 
 
 
