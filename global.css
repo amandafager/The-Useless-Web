@@ -1,13 +1,34 @@
 @font-face {
   font-family: "Quicksand";
-  src: local("Quicksand"), url("Quicksand-Light.woff2") format("woff2"),
-    url("Quicksand-Light.woff") format("woff");
-  font-weight: 100 1000;
+  src: local("Quicksand Regular"), local("Quicksand-Regular"),
+    url("/fonts/Quicksand-Regular.woff2") format("woff2"),
+    url("fonts/Quicksand-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("fonts/Roboto-Bold.woff2") format("woff2"),
+    url("fonts/Roboto-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"),
+    url("fonts/Roboto-Light.woff2") format("woff2"),
+    url("fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
-  font-family: "Quicksand";
-  font-weight: 1000;
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
@@ -17,6 +38,10 @@
   --main-bg-color: #d8a4a4;
   --box-color: #28483b;
   --button-color: #6c4343;
+  --main-font: "Roboto", sans-serif;
+  --snow-font: "Quicksand", sans-serif;
+  --button-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5),
+    0 0 0 1.5px rgba(167, 151, 159, 0.5);
 }
 
 body {
@@ -30,22 +55,21 @@ body {
 }
 
 button {
-  border: 4px solid var(--button-color);
+  border: 0.2rem solid var(--button-color);
   color: var(--button-color);
   position: relative;
   z-index: 2;
-  border-radius: 0.8rem;
-  padding: 0.4rem 1rem 0.4rem 1rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
   background-color: transparent;
-  font-family: "Roboto", sans-serif;
   cursor: pointer;
+  font-family: var(--main-font);
+  font-weight: 700;
 }
 
 button:active {
   transform: translateY(1px);
   filter: saturate(150%);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5),
-    0 0 0 1.5px rgba(167, 151, 159, 0.5);
+  box-shadow: var(--button-shadow);
 }
 button:focus {
   outline: none;
@@ -54,14 +78,18 @@ button:focus {
   touch-action: manipulation;
 }
 button:focus-visible {
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5),
-    0 0 0 1.5px rgba(167, 151, 159, 0.5);
-  background-color: white;
+  box-shadow: var(--button-shadow);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button-on-Dark {
+  border: 0.15rem solid white;
+  color: white;
 }
 
 @media screen and (min-width: 600px) {
   button:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
   }
   * {
     font-size: 18px;

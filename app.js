@@ -1,3 +1,25 @@
+const allbtn = document.querySelectorAll('button');
+
+
+
+
+window.addEventListener('scroll', () => {
+     
+  allbtn.forEach(function(btn){
+
+    if (window.scrollY > 0.5){
+       body.style.backgroundColor = '#101327';
+       btn.classList.add('button-on-Dark');      
+    }
+    else if (window.scrollY < 0.5){
+       body.style.backgroundColor = ''; 
+       btn.classList.remove('button-on-Dark');
+    }
+  });
+});
+
+
+
 
 function gifShow(){
 
@@ -6,6 +28,7 @@ function gifShow(){
   const slideForward = document.querySelector('.slide-forward');
   const slideBack = document.querySelector('.slide-back');
   
+
   
   slideForward.addEventListener('click', () => {
     let w = container.clientWidth;
@@ -42,13 +65,13 @@ function gifShow(){
 function fadeOut() {
 
   const slideShow = document.querySelector('.slide-show');
-  const removeFirst = document.querySelector('.first');
+  const removeIntro = document.querySelector('.intro');
 
   setTimeout(function(){
-    removeFirst.style.opacity = 0;
+    removeIntro.style.opacity = 0;
   }, 4000); 
   setTimeout(function(){
-    slideShow.removeChild(removeFirst);
+    slideShow.removeChild(removeIntro);
   }, 8000); 
 }
 
@@ -68,13 +91,34 @@ setTimeout(function(){
 
 setTimeout(function(){
   fadeInButtons(); 
-}, 8000); 
+}, 7000); 
+
+
 
 
 setTimeout(function(){ 
   const leef = document.querySelector('.leef svg');
   leef.classList.add('animation-leef'); 
-}, 3000);
+}, 2500);
+
+setTimeout(function(){ 
+  const leef = document.querySelector('.leef svg');
+  leef.classList.remove('animation-leef'); 
+}, 4000);
+
+
+
+
+const leef = document.querySelector('.leef svg');
+
+leef.addEventListener('mouseover', () => {
+  
+  leef.classList.add('animation-leef'); 
+  setTimeout(function(){
+    leef.classList.remove('animation-leef');
+  }, 1000);
+});
+
 
 
 
@@ -84,3 +128,4 @@ setTimeout(function(){
   slideBack.disabled = (slides.length === 0) ? true : false;
   slideForward.disabled = (slides.length === slidesLength - 1) ? true : false;
 */
+

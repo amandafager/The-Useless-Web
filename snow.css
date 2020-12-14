@@ -1,6 +1,7 @@
 .glow {
-  text-shadow: 0 0 40px #fff, 0 0 4px #fff, 0 0 50px #e60073, 0 0 4px #e60073,
-    0 0 30px #e60073, 0 0 20px #e60073, 0 0 10px #e60073;
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.541),
+    0 0 4px rgba(255, 255, 255, 0.714), 0 0 50px #ffffff7e, 0 0 4px #ffffff8a,
+    0 0 30px #ffffffac, 0 0 20px #ffffff92, 0 0 10px #ffffff8c;
 }
 
 .container-snow {
@@ -13,14 +14,15 @@
   display: none;
   z-index: 2;
   pointer-events: visible;
+  margin-top: -2rem;
 }
 
 .snow-flake {
   height: 1px;
   animation: fall 30s linear forwards infinite;
   color: white;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
+  font-family: var(--snow-font);
+  font-weight: 300;
 }
 
 @keyframes fall {
@@ -30,4 +32,28 @@
   to {
     transform: translateY(100vh);
   }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  60% {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: 2;
 }
