@@ -3,16 +3,15 @@ const body = document.querySelector('body');
 const snowButton = document.querySelector('.lets-snow');
 
 
+
 setTimeout(function(){
    snowButton.style.opacity = 1;
    snowButton.classList.add('bounce'); 
  }, 10000); 
  
-
-createSnow();
-
-
 snowButton.addEventListener('click', () => {
+
+   
 
     if (snow.style.display === "flex") {
        snow.style.display = "none";
@@ -41,6 +40,7 @@ snowButton.addEventListener('click', () => {
         snow.appendChild(flake);
   };
  };
+ createSnow();
 
 
 const snowflakes = document.querySelectorAll('.snow-flake');

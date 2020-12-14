@@ -42,17 +42,11 @@ function gifShow(){
   
   const gifs = [
     'https://media.giphy.com/media/ienko7tUwlgz86igqU/giphy.mp4',
-    'https://media.giphy.com/media/BhTVQbO9r0U6s/giphy.mp4',
+    'https://media.giphy.com/media/r3jTnU6iEwpbO/giphy.mp4',
     'https://media.giphy.com/media/dB5cQcF3dCHdM2iz4h/giphy.mp4',
-    'https://media.giphy.com/media/3oriOb1AHvsIj24On6/giphy.mp4',
-    'https://media.giphy.com/media/GyqAOTapPevwA/giphy.mp4', 
+    'https://media.giphy.com/media/3oriOb1AHvsIj24On6/giphy.mp4', 
     'https://media.giphy.com/media/MrxXXBriEIKBO/giphy.mp4',
     'https://media.giphy.com/media/ahZZZZFGLGhvq/giphy.mp4',
-    'https://media.giphy.com/media/6eEWybJorTCvK/giphy.mp4',
-    'https://media.giphy.com/media/3lsNKXm6IUS3K/giphy.mp4',
-    'https://media.giphy.com/media/9w475hDWEPVlu/giphy.mp4',
-    'https://media.giphy.com/media/HBMCmtsPEUShG/giphy.mp4',
-    'https://media.giphy.com/media/1dLMYg36TuESIdjnZT/giphy.mp4',
 
   ];
   
@@ -77,7 +71,7 @@ function fadeOut() {
 
   setTimeout(function(){
     removeIntro.style.opacity = 0;
-  }, 5000); 
+  }, 4000); 
   setTimeout(function(){
     slideShow.removeChild(removeIntro);
   }, 8000); 
@@ -95,7 +89,7 @@ setTimeout(function(){
   const container = document.querySelector('.container');
   container.style.display = 'flex';
   gifShow(); 
-}, 3000);
+}, 4000);
 
 setTimeout(function(){
   fadeInButtons(); 
@@ -126,6 +120,7 @@ leef.addEventListener('mouseover', () => {
     leef.classList.remove('animation-leef');
   }, 1000);
 });
+
 
 
 
