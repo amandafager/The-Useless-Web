@@ -1,39 +1,39 @@
 The Useless Web 
 ---
 
-## Description 
+### Description 
     
-First hand-in assignments in Javascript.
+First assignments in JavaScript.
    
     
-## Technologies
+### Technologies
 
-* Javascript
+* JavaScript
 * CSS
 * HTML
 
 
-## Link to project 
+### Link to project 
 
 https://a-useless-website.netlify.app/
 
 
-## Installation
+### Installation
 
 1. #### Clone the repository 
 ```   https://github.com/amandafager/The-Useless-Web.git   ```
 
 2. #### Start a local server in the command line
-```   $ php -S localhost:8000/index.php   ```
+```   $ php -S localhost:8000/index.html   ```
 
 3. #### Open the index.php file in your browser
 
 
-## Testers
+### Testers
 * Gilda E
 * Rikard
 
 
-## License
+### License
 This project is licensed under the MIT License - see the LICENSE file for details
     
