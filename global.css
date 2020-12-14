@@ -36,8 +36,10 @@
 
 :root {
   --main-bg-color: #d8a4a4;
+  --bg-color-scroll: #101327;
   --box-color: #28483b;
   --button-color: #6c4343;
+  --white: rgb(255, 255, 255);
   --main-font: "Roboto", sans-serif;
   --snow-font: "Quicksand", sans-serif;
   --button-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5),
@@ -83,8 +85,8 @@ button:focus-visible {
 }
 
 .button-on-Dark {
-  border: 0.15rem solid white;
-  color: white;
+  border: 0.15rem solid var(--white);
+  color: var(--white);
 }
 
 @media screen and (min-width: 600px) {

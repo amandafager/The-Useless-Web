@@ -30,8 +30,8 @@ https://a-useless-website.netlify.app/
 
 
 ## Testers
-* 
-* 
+* Gilda E
+* Rikard
 
 
 ## License

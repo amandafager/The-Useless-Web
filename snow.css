@@ -34,7 +34,7 @@ header button {
 .snow-flake {
   height: 1px;
   animation: fall 30s linear forwards infinite;
-  color: white;
+  color: var(--white);
   font-family: var(--snow-font);
   font-weight: 300;
 }
