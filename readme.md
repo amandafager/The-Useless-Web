@@ -1,4 +1,4 @@
-![uselessweb](https://user-images.githubusercontent.com/70512941/121484091-2e789600-c9cf-11eb-95b0-e8edb2ee530f.gif)
+![theuselessweb](https://user-images.githubusercontent.com/70512941/121496247-91235f00-c9da-11eb-9214-383bdf0adb0c.gif)
 
 # The Useless Web
 
