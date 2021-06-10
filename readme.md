@@ -1,39 +1,28 @@
-The Useless Web 
----
+![uselessweb](https://user-images.githubusercontent.com/70512941/121484091-2e789600-c9cf-11eb-95b0-e8edb2ee530f.gif)
 
-### Description 
-    
-First assignments in JavaScript.
-   
-    
-### Technologies
+# The Useless Web
 
-* JavaScript
-* CSS
-* HTML
+First assignments in JavaScript at Yrgo. The mission was to create a completely useless website in HTML, CSS, and Javascript.
 
+### [Visit my useless webiste: a-useless-website.netlify.app](https://a-useless-website.netlify.app/)
 
-### Link to project 
+<br>
 
-https://a-useless-website.netlify.app/
+# Technologies
 
+- JavaScript
+- CSS
+- HTML
 
-### Installation
+<br>
 
-1. #### Clone the repository 
-```   https://github.com/amandafager/The-Useless-Web.git   ```
+# Testers
 
-2. #### Start a local server in the command line
-```   $ php -S localhost:8000/index.html   ```
+- Gilda E
+- Rikard
 
-3. #### Open the index.php file in your browser
+<br>
 
+# License
 
-### Testers
-* Gilda E
-* Rikard
-
-
-### License
 This project is licensed under the MIT License - see the LICENSE file for details
-    
