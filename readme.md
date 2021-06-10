@@ -2,11 +2,9 @@
 
 # The Useless Web
 
-First assignments in JavaScript at Yrgo. The mission was to create a completely useless website in HTML, CSS, and Javascript.
+First assignments in JavaScript at Yrgo. The mission was to create a small website which serves no purpose but still makes the user intrigued.
 
 ### [Visit my useless webiste: a-useless-website.netlify.app](https://a-useless-website.netlify.app/)
-
-<br>
 
 # Technologies
 
@@ -14,14 +12,10 @@ First assignments in JavaScript at Yrgo. The mission was to create a completely 
 - CSS
 - HTML
 
-<br>
-
 # Testers
 
 - Gilda E
 - Rikard
-
-<br>
 
 # License
 
